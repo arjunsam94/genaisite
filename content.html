@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal Video</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #006400;
+            color: #FFFFFF;
+        }
+
+        .video-container {
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            background: linear-gradient(to left, #a8e063 0%, #56ab2f 40%);
+        }
+
+        .title-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .subtext {
+            font-size: 18px;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        video {
+            width: 100%; /* Responsive video size */
+            max-width: 850px; /* Adjust as needed */
+            border-radius: 5px;
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #FFFFFF;
+            color: #000000; /* Text color */
+            text-decoration: none; /* Removes underline from links */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+        .button-link:hover {
+            background-color: #f2f2f2; /* Slightly darker shade on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="title-logo">
+            <h1>Majestic Mt.Rainier</h1>
+        </div>
+        <video controls autoplay>
+            <source src="rainier.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p><a href="index.html" class="button-link">Home page</a></p>
+    </div>
+</body>
+</html>

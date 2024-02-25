@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arsenal Carousel</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #006400;
+            color: #FFFFFF;
+        }
+
+        .carousel-container {
+            text-align: center;
+            width: 80%;
+            max-width: 850px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            background: linear-gradient(to left, #a8e063 0%, #56ab2f 40%);
+        }
+
+        .title-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .subtext {
+            font-size: 18px;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .carousel img {
+            width: 100%;
+            display: none;
+            border-radius: 5px;
+            transition: opacity 0.5s ease;
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #FFFFFF;
+            color: #000000; /* Text color */
+            text-decoration: none; /* Removes underline from links */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            transition: all 0.3s ease; /* Smooth transition for hover effects */
+        }
+
+        .button-link:hover {
+            background-color: #f2f2f2; /* Slightly darker shade on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div>
+            <h1>Washington attractions</h1>
+        </div>
+        <div><p>AI generated images of my favorite locations in Washington including Mt.Rainier, Colchuck lake, and Diablo lake </p></div>
+        <div class="carousel">
+            <img src="image1.jpg" alt="Image 1" style="display: block;">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <p><a href="content.html" class="button-link">View a clip</a></p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.carousel img');
+            let currentIndex = 0;
+
+            function showImage(index) {
+                images.forEach((img, idx) => {
+                    img.style.display = 'none';
+                    img.style.opacity = 0;
+                });
+                images[index].style.display = 'block';
+                setTimeout(() => images[index].style.opacity = 1, 10);
+            }
+
+            showImage(currentIndex);
+
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
