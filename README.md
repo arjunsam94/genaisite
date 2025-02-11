@@ -10,7 +10,7 @@ Used ChatGPT to generate HTML, CSS, and JavaScript code to test its limitations 
 * Generated a video with Runway.ML which plays automatically in the next page.
 
 ## Observations
-* At first, ChatGPT split the code into separate HTML, CSS, JS files based on my requirement. However, this didn’t allow me to apply the style and functionality to the right elements. Hence, I asked it to incorporate all of the code in one html file which worked perfectly.
+* At first, ChatGPT split the code into separate HTML, CSS, JS files based on my requirement. However, this required my intervention since the style and functionality weren't being applied to the right elements with the generated code.
 * The first iteration that ChatGPT gave me was quite plain with solid colors and without any container. I asked it to make the page more modern by adding gradient colors and content sections.
 * Image carousel was challenging to implement since the first iteration didn’t apply styles and functionalities to the right elements in the page. Although I didn’t need to change the over JS and Style sheet code structure a lot, I still had to step in and manually ensure that the elements were in the right html blocks and the JS and style code was pointing to the right element in the right hierarchy. This shows that while ChatGPT can be great for getting a simple page up and running with good design, it might be easier and faster to tweak the code manually with more complex requirements.
 * When generating images using ChatGPT, it got the overall idea of the prompt spot on. When it came to resizing the image, ChatGPT had some minor issues which it rectified with more specific prompts.
